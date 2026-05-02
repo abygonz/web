@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "TU-USUARIO/mi-web"
+        IMAGE_NAME = "abygonz/mi-web"
         TAG = "latest"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/TU-USUARIO/mi-web.git'
+                git 'https://github.com/abygonz/mi-web.git'
             }
         }
 
