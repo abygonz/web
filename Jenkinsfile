@@ -36,8 +36,8 @@ pipeline {
         stage('Deploy Container') {
             steps {
                 sh '''
-                docker rm -f mi-web || true
-                docker run -d --name mi-web -p 8080:8080 $IMAGE_NAME:$TAG
+                docker rm -f web || true
+                docker run -d --name -web -p 8080:8080 $IMAGE_NAME:$TAG
                 '''
             }
         }
