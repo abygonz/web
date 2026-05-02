@@ -37,7 +37,7 @@ pipeline {
             steps {
                 sh '''
                 docker rm -f web || true
-                docker run -d --name web -p 8080:8080 $IMAGE_NAME:$TAG
+                docker run -d --name web -p 5080:5080 $IMAGE_NAME:$TAG
                 '''
             }
         }
